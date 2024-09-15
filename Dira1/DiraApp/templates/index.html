@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,21 +16,21 @@
     <title>DIRA FARM</title>
 
     <!-- ========== Favicon Icon ========== -->
-    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}" type="image/x-icon">
 
     <!-- ========== Start Stylesheet ========== -->
-    <link href="assets/css/bootstrap.min.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/magnific-popup.css" rel="stylesheet">
-    <link href="assets/css/flaticon-set.css" rel="stylesheet">
-    <link href="assets/css/swiper-bundle.min.css" rel="stylesheet">
-    <link href="assets/css/animate.min.css" rel="stylesheet">
-    <link href="assets/css/validnavs.css" rel="stylesheet">
-    <link href="assets/css/helper.css" rel="stylesheet">
-    <link href="assets/css/unit-test.css" rel="stylesheet">
-    <link href="assets/css/shop.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/magnific-popup.css' %}" rel="stylesheet">
+    <link href="{% static 'css/flaticon-set.css' %}" rel="stylesheet">
+    <link href="{% static 'css/swiper-bundle.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/animate.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/validnavs.css' %}" rel="stylesheet">
+    <link href="{% static 'css/helper.css' %}" rel="stylesheet">
+    <link href="{% static 'css/unit-test.css' %}" rel="stylesheet">
+    <link href="{% static 'css/shop.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+   <link href="style.css" rel="stylesheet">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
     <!-- ========== End Stylesheet ========== -->
 
@@ -128,7 +130,7 @@
                             <i class="fa fa-bars"></i>
                         </button>
                         <a class="navbar-brand" href="index.html">
-                            <img src="assets/img/logo.png" class="logo" alt="Logo">
+                            <img src="{% static 'img/logo.png' %}" class="logo" alt="Logo">
                         </a>
                     </div>
                     <!-- End Header Navigation -->
@@ -137,7 +139,7 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
 
-                    <img src="assets/img/logo.png" alt="Logo">
+                    <img src="{% static 'img/logo.png' %}" alt="Logo">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
                         <i class="fa fa-times"></i>
                     </button>
@@ -195,7 +197,7 @@
             <div class="swiper-slide banner-style-one">
                 <div class="banner-thumb bg-cover shadow dark" style="background: url(assets/img/potatoe.jpg);"></div>
                 <div class="shape">
-                    <img src="assets/img/shape/2.png" alt="Image Not Found">
+                    <img src="{% static 'img/shape/2.png' %}" alt="Image Not Found">
                 </div>
                 <div class="container">
                     <div class="row align-center">
@@ -258,7 +260,7 @@
             <div class="row align-center">
                 <div class="col-xl-5 col-lg-5">
                      <div class="">
-                        <img src="assets/img/AI.jpeg"  height="600px" width="1000px" alt="Image Not Found"> 
+                        <img src="{% static 'img/AI.jpeg' %}"  height="600px" width="1000px" alt="Image Not Found"> 
                     </div> 
                 </div>
                 <div class="col-xl-6 offset-xl-1 col-lg-7">
@@ -303,6 +305,7 @@
         </div>
     </div>
 
+<!-- registerModal-->
     <div class="container">
         <div class="row align-items-center">
             <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
@@ -317,7 +320,7 @@
                                 <!-- Image Column -->
                                 <div class="col-lg-5 d-flex justify-content-center align-items-center">
                                     <div class="image-container">
-                                        <img src="assets/img/leaves.jpeg" height="300px" width="100%" alt="Image">
+                                        <img src="{% static 'img/leaves.jpeg' %}" height="300px" width="100%" alt="Image">
                                     </div>
                                 </div>
                                 <!-- Form Column -->
@@ -393,7 +396,7 @@
                             <!-- Image Column -->
                             <div class="col-lg-6 d-flex justify-content-center align-items-center">
                                 <div class="image-container">
-                                    <img src="assets/img/leaves.jpeg" height="300px" width="100%" alt="Image">
+                                    <img src="{% static 'img/leaves.jpeg' %}" height="300px" width="100%" alt="Image">
                                 </div>
                             </div>
                             <!-- Form Column -->
@@ -437,7 +440,7 @@
                     <div class="col-xl-4 col-md-6 single-item">
                         <div class="blog-style-one">
                             <div class="thumb">
-                                <a href="#"><img src="assets/img/potato.PNG" height="400px" width="400px"  alt="Image Not Found"></a>
+                                <a href="#"><img src="{% static 'img/potato.PNG' %}" height="400px" width="400px"  alt="Image Not Found"></a>
                             </div>
                             <div>
                                 <h3 class="post-title">
@@ -456,7 +459,7 @@
                     <div class="col-xl-4 col-md-6 single-item">
                         <div class="blog-style-one">
                             <div class="thumb">
-                                <a href="#"><img src="assets/img/treat.PNG" height="400px" width="400px"  alt="Image Not Found"></a>
+                                <a href="#"><img src="{% static 'img/treat.PNG' %}" height="400px" width="400px"  alt="Image Not Found"></a>
                             </div>
                             <div>
                                 <h3 class="post-title">
@@ -475,7 +478,7 @@
                     <div class="col-xl-4 col-md-6 single-item">
                         <div class="blog-style-one">
                             <div class="thumb">
-                                <a href="#"><img src="assets/img/sack.PNG" height="400px" width="400px" alt="Image Not Found"></a>
+                                <a href="#"><img src="{% static 'img/sack.PNG' %}" height="400px" width="400px" alt="Image Not Found"></a>
                             </div>
                             <div>
                                 <h3 class="post-title">
@@ -518,7 +521,7 @@
     <!-- End Choose Us -->
     <div class="contact-area overflow-hidden bg-light py-5" id="features">
         <div class="sahpe-right-bottom position-relative">
-            <img src="assets/img/flowers-on.jpg" alt="Shape" class="img-fluid">
+            <img src="{% static 'img/flowers-on.jpg' %}" alt="Shape" class="img-fluid">
         </div>
         <div class="container">
             <div class="row align-items-center">
@@ -527,7 +530,7 @@
                 <div class="col-xl-5 offset-xl-1 col-lg-5">
                     <div class="contact-style-one-info text-light">
                        
-                        <img src="assets/img/scan.jpg"  height="400px" width="400px" ccalt="Illustration" class="img-fluid mb-3">
+                        <img src="{% static 'img/scan.jpg' %}"  height="400px" width="400px" ccalt="Illustration" class="img-fluid mb-3">
                     </div>
                 </div>
                 <div class="col-xl-6 col-lg-7">
@@ -546,7 +549,7 @@
                             <div class="row mb-3">
                                 <div class="col-lg-12">
                                     <button type="submit" class="btn btn-primary">
-                                        <i class="fa fa-paper-plane"></i> Upload
+                                        <i class="fa fa-paper-plane"></i> Diagnose
                                     </button>
                                 </div>
                             </div>
@@ -582,7 +585,7 @@
                                       <div class="swiper-slide">
                                         <div class="farmer-style-one-item">
                                             <div class="thumb">
-                                                <img src="assets/img/pk.jpg" alt="Image Not Found">
+                                                <img src="{% static 'img/pk.jpg' %}" alt="Image Not Found">
                                                 <div class="social">
                                                     <i class="fas fa-share-alt"></i>
                                                     <ul>
@@ -616,7 +619,7 @@
                                     <div class="swiper-slide">
                                         <div class="farmer-style-one-item">
                                             <div class="thumb">
-                                                <img src="assets/img/Dalton.jpeg" alt="Image Not Found">
+                                                <img src="{% static 'img/Dalton.jpeg' %}" alt="Image Not Found">
                                                 <div class="social">
                                                     <i class="fas fa-share-alt"></i>
                                                     <ul>
@@ -659,14 +662,14 @@
     ============================================= -->
     <div class="contact-area contact-page overflow-hidden bg-gray default-padding" id="contact">
         <div class="sahpe-right-bottom">
-            <img src="assets/img/shape/16.png" alt="Image Not Found">
+            <img src="{% static 'img/shape/16.png' %}" alt="Image Not Found">
         </div>
         <div class="container">
             <div class="row align-center">
                 
                 <div class="col-tact-stye-one col-xl-7 col-lg-7">
                     <div class="contact-form-style-one mb-md-50">
-                        <img src="assets/img/illustration/10.png" alt="Image Not Found">
+                        <img src="{% static 'img/illustration/10.png' %}" alt="Image Not Found">
                         <h5 class="sub-title">Have Questions?</h5>
                         <h2 class="heading">Send us a massage</h2>
                         <form action="https://validthemes.net/site-template/agrica/assets/mail/contact.php" method="POST" class="contact-form contact-form">
@@ -724,7 +727,7 @@
                             </span>
                         </h2>
                         <p>
-                            Plan upon yet way get cold spot its week. Almost do am or limits hearts. Resolve parties but why she shewing.
+                            Stay connected and never miss an update! Subscribe to our newsletter for the latest news, tips, and insights on potato farming and disease management. Get exclusive access to expert advice, AI-powered solutions, and valuable resources that will help you maximize your crop yields. Join our community of farmers today and stay informed with the most reliable agricultural information at your fingertips!
                         </p>
                         <ul>
                             <li>
@@ -744,7 +747,7 @@
                             <li>
                                 <div class="info">
                                     <h5 class="title">Official Email</h5>
-                                    <a href="mailto:info@agrul.com.com">info@agrul.com</a>
+                                    <a href="mailto:dira.hub.limited@gmail.com">info@dirahub.com</a>
                                 </div>
                             </li>
                         </ul>
@@ -757,7 +760,7 @@
     <!-- End Contact -->
     <!-- Start Footer 
     ============================================= -->
-    <footer class="bg-dark text-light" style="background-image: url(assets/img/shape/8.png);">
+    <footer class="bg-dark text-light" style="background-image: url('{% static 'img/shape/8.png' %});">
         <div class="container">
             <div class="f-items default-padding">
                 <div class="row">
@@ -765,9 +768,9 @@
                     <!-- Single Itme -->
                     <div class="col-lg-4 col-md-6 item">
                         <div class="footer-item about">
-                            <img class="logo" src="assets/img/logo.png" alt="Logo">
+                            <img class="logo" src="{% static 'img/logo.png' %}" alt="Logo">
                             <p>
-                                Happen active county. Winding morning ambition shyness evident to poor. Because elderly new to the point to main success.
+                                Stay connected and never miss an update! Subscribe to our newsletter for the latest news, tips, and insights on potato farming and disease management. Get exclusive access to expert advice, AI-powered solutions, and valuable resources that will help you maximize your crop yields. Join our community of farmers today and stay informed with the most reliable agricultural information at your fingertips!
                             </p>
                             <form action="#">
                                 <input type="email" placeholder="Your Email" class="form-control" name="email">
@@ -811,7 +814,8 @@
                                     </div>
                                     <div class="content">
                                         <strong>Address:</strong>
-                                        Dira Farm, Kampala Uganda
+                                        <strong>1. Dira Farm, Nairobi Kenya</strong> <br>2nd Floor, Chandaria Innovation Centre Building, Kenyatta University
+                                        <strong>2. Dira Farm, Kampala Uganda</strong> <br> DDA House Room 45
                                     </div>
                                 </li>
                                 <li>
@@ -820,7 +824,7 @@
                                     </div>
                                     <div class="content">
                                         <strong>Email:</strong>
-                                        <a href="mailto:info@validtheme.com">info@dirafarm.com</a>
+                                        <a href="mailto:dira.hub.limited@gmail.com">info@dirahub.com</a>
                                     </div>
                                 </li>
                                 <li>
@@ -829,6 +833,7 @@
                                     </div>
                                     <div class="content">
                                         <strong>Phone:</strong>
+                                        <a href="tel:254746929063">+254746929063</a>
                                         <a href="tel:256760082896">+256 760082896</a>
                                     </div>
                                 </li>
@@ -844,41 +849,41 @@
             <div class="footer-bottom text-center">
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>&copy; Copyright 2024. All Rights Reserved by <a href="#">Dira farms</a></p>
+                        <p>&copy; Copyright 2024. All Rights Reserved by <a href="#">Dira Hub</a></p>
                     </div>
                 </div>
             </div>
             <!-- End Footer Bottom -->
         </div>
         <div class="shape-right-bottom">
-            <img src="assets/img/shape/7.png" alt="Image Not Found">
+            <img src="{% static 'img/shape/7.png' %}" alt="Image Not Found">
         </div>
     </footer>
     <!-- End Footer -->
     
     <!-- jQuery Frameworks
     ============================================= -->
-    <script src="scripts.js"></script>
-    <script src="assets/js/jquery-3.6.0.min.js"></script>
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/jquery.appear.js"></script>
-    <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/progress-bar.min.js"></script>
-    <script src="assets/js/circle-progress.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/magnific-popup.min.js"></script>
-    <script src="assets/js/count-to.js"></script>
-    <script src="assets/js/jquery.scrolla.min.js"></script>
-    <script src="assets/js/ScrollOnReveal.js"></script>
-    <script src="assets/js/YTPlayer.min.js"></script>
-    <script src="assets/js/validnavs.js"></script>
-    <script src="assets/js/gsap.js"></script>
-    <script src="assets/js/ScrollTrigger.min.js"></script>
-    <script src="assets/js/SplitText.min.js"></script>
-    <script src="assets/js/main.js"></script>
+   <!-- <script src="scripts.js"></script>
+    <script src="{% static 'jquery-3.6.0.min.js' %}"></script>
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'js/jquery.appear.js' %}"></script>
+    <script src="{% static 'js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'js/progress-bar.min.js' %}"></script>
+    <script src="{% static 'js/circle-progress.js' %}"></script>
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+    <script src="{% static 'js/magnific-popup.min.js' %}"></script>
+    <script src="{% static 'js/count-to.js' %}"></script>
+    <script src="{% static 'js/jquery.scrolla.min.js' %}"></script>
+    <script src="{% static 'js/ScrollOnReveal.js' %}"></script>
+    <script src="{% static 'js/YTPlayer.min.js' %}"></script>
+    <script src="{% static 'js/validnavs.js' %}"></script>
+    <script src="{% static '/js/gsap.js' %}"></script>
+    <script src="{% static 'js/ScrollTrigger.min.js' %}"></script>
+    <script src="{% static 'js/SplitText.min.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.min.js"></script>-->
     <script>
         // JavaScript for Drag and Drop functionality
         const dragDropContainer = document.getElementById('dragDropContainer');
