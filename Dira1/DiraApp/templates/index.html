@@ -306,73 +306,74 @@
     </div>
 
 <!-- registerModal-->
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
-                <div class="modal-dialog custom-width">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="registerModalLabel">Register</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <!-- Image Column -->
-                                <div class="col-lg-5 d-flex justify-content-center align-items-center">
-                                    <div class="image-container">
-                                        <img src="{% static 'img/leaves.jpeg' %}" height="300px" width="100%" alt="Image">
-                                    </div>
+<!-- Register Modal-->
+<div class="container">
+    <div class="row align-items-center">
+        <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+            <div class="modal-dialog custom-width">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="registerModalLabel">Register</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <!-- Image Column -->
+                            <div class="col-lg-5 d-flex justify-content-center align-items-center">
+                                <div class="image-container">
+                                    <img src="{% static 'img/leaves.jpeg' %}" height="300px" width="100%" alt="Image">
                                 </div>
-                                <!-- Form Column -->
-                                <div class="col-lg-7">
-                                    <form id="registerForm">
-                                        <div class="row mb-3">
-                                            <div class="col-lg-6">
-                                                <label for="username" class="form-label">Name</label>
-                                                <input type="text" class="form-control" id="username" name="name" required>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <label for="email" class="form-label">Email</label>
-                                                <input type="email" class="form-control" id="email" name="email" required>
-                                            </div>
+                            </div>
+                            <!-- Form Column -->
+                            <div class="col-lg-7">
+                                <!-- Register form -->
+                                <form method="POST" action="{% url 'register' %}">
+                                    {% csrf_token %}
+                                    <div class="row mb-3">
+                                        <div class="col-lg-6">
+                                            <label for="username" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="username" name="username" required>
                                         </div>
-                                        <div class="row mb-3">
-                                            <div class="col-lg-6">
-                                                <label for="dob" class="form-label">Date of Birth</label>
-                                                <input type="text" class="form-control" id="dob" name="dob" required>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <label class="form-label">Gender</label>
-                                                <div class="gender-options">
-                                                    <input type="radio" id="male" name="gender" value="male">
-                                                    <label for="male" class="me-3">Male</label>
-                                
-                                                    <input type="radio" id="female" name="gender" value="female">
-                                                    <label for="female">Female</label>
-                                                </div>
-                                            </div>
+                                        <div class="col-lg-6">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" required>
                                         </div>
-                                        <div  class="row mb-3">
-                                            <div class="col-lg-6">
-                                                <label for="password" class="form-label">Password</label>
-                                                <input type="password" class="form-control" id="password" name="password" required>
-                                            </div>
-                                            <div class="col-lg-6">
-                                                <label for="cpassword" class="form-label">Confirm Password</label>
-                                                <input type="password" class="form-control" id="cpassword" name="confirm-password" required>
-                                            </div>
-                                        </div>
-                                        <div class="row mb-3">
-                                            <div class="col-lg-6">
-                                                <button type="submit" class="btn btn-primary">Comfirm</button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <div class="form-footer">
-                                        <p class="mb-0">Already have an account? 
-                                                <a class="btn btn-theme btn-sm radius animation" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Login</a>
-                                        </p>
                                     </div>
+                                    <div class="row mb-3">
+                                        <div class="col-lg-6">
+                                            <label for="dob" class="form-label">Date of Birth</label>
+                                            <input type="date" class="form-control" id="dob" name="dob" required>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label class="form-label">Gender</label>
+                                            <div class="gender-options">
+                                                <input type="radio" id="male" name="gender" value="male" required>
+                                                <label for="male" class="me-3">Male</label>
+                                                <input type="radio" id="female" name="gender" value="female" required>
+                                                <label for="female">Female</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-lg-6">
+                                            <label for="password" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="password" name="password1" required>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <label for="cpassword" class="form-label">Confirm Password</label>
+                                            <input type="password" class="form-control" id="cpassword" name="password2" required>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3">
+                                        <div class="col-lg-6">
+                                            <button type="submit" class="btn btn-primary">Confirm</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="form-footer">
+                                    <p class="mb-0">Already have an account?
+                                        <a class="btn btn-theme btn-sm radius animation" data-bs-toggle="modal" data-bs-target="#loginModal" href="#">Login</a>
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -381,14 +382,17 @@
             </div>
         </div>
     </div>
+</div>
+
  <!-- End Banner -->
- <div class="container">
+ <!-- Login Modal-->
+<div class="container">
     <div class="row align-items-center">
-        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
             <div class="modal-dialog custom-width">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="registerModalLabel">Login</h5>
+                        <h5 class="modal-title" id="loginModalLabel">Login</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
@@ -401,11 +405,13 @@
                             </div>
                             <!-- Form Column -->
                             <div class="col-lg-6">
-                                <form id="login">
+                                <!-- Login form -->
+                                <form method="POST" action="{% url 'login' %}">
+                                    {% csrf_token %}
                                     <div class="row mb-3">
                                         <div class="col-lg-12">
                                             <label for="email" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="email" name="email" required>
+                                            <input type="email" class="form-control" id="email" name="username" required>
                                         </div>
                                     </div>
                                     <div class="row mb-3">
@@ -417,8 +423,8 @@
                                     <button type="submit" class="btn btn-primary">Login</button>
                                 </form>
                                 <div class="form-footer">
-                                    <p class="mb-0">Dont have an account? 
-                                            <a class="btn btn-theme btn-sm radius animation" data-bs-toggle="modal" data-bs-target="#registerModal" href="#">Register</a>
+                                    <p class="mb-0">Don’t have an account?
+                                        <a class="btn btn-theme btn-sm radius animation" data-bs-toggle="modal" data-bs-target="#registerModal" href="#">Register</a>
                                     </p>
                                 </div>
                             </div>
